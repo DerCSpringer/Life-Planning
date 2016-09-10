@@ -1,4 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F27" minimumToolsVersion="Automatic">
+    <entity name="Goal" representedClassName="Goal" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isCompleted" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="habitsForGoal" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Habit" inverseName="goalForHabit" inverseEntity="Habit" syncable="YES"/>
+        <relationship name="toDosForGoal" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ToDo" inverseName="goalForHabit" inverseEntity="ToDo" syncable="YES"/>
+    </entity>
+    <entity name="Habit" representedClassName="Habit" syncable="YES">
+        <attribute name="alertType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="completedTimes" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="continuing" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dateHabitWasLastModified" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dates" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notification" optional="YES" attributeType="Binary" valueTransformerName="UILocalNotification" syncable="YES"/>
+        <attribute name="penality" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="timesToComplete" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <relationship name="goalForHabit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Goal" inverseName="habitsForGoal" inverseEntity="Goal" syncable="YES"/>
+        <relationship name="toDosForHabit" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ToDo" inverseName="habitForToDo" inverseEntity="ToDo" syncable="YES"/>
+    </entity>
+    <entity name="ToDo" representedClassName="ToDo" syncable="YES">
+        <attribute name="alert" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isCompleted" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="isFloating" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notification" optional="YES" attributeType="Binary" valueTransformerName="UILocalNotification" syncable="YES"/>
+        <relationship name="goalForHabit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Goal" inverseName="toDosForGoal" inverseEntity="Goal" syncable="YES"/>
+        <relationship name="habitForToDo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Habit" inverseName="toDosForHabit" inverseEntity="Habit" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Goal" positionX="214" positionY="-297" width="128" height="148"/>
+        <element name="Habit" positionX="43" positionY="-315" width="128" height="238"/>
+        <element name="ToDo" positionX="378" positionY="-315" width="126" height="178"/>
+    </elements>
 </model>
