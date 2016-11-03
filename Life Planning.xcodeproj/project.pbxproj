@@ -1,0 +1,940 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43FC55CB75C73684E8D6C1B2 /* libPods-LifePlanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B89007614E8E7F6CC9170A6 /* libPods-LifePlanner.a */; };
+		650DDAC71CD2C11C005B7D67 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 650DDAC61CD2C11C005B7D67 /* Podfile */; };
+		651B0B5B1D40330800D2CA63 /* LifePlannerHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 651B0B591D40330800D2CA63 /* LifePlannerHelper.h */; };
+		651B0B5C1D40330800D2CA63 /* LifePlannerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 651B0B5A1D40330800D2CA63 /* LifePlannerHelper.m */; };
+		653615AA1CF79B9F0000B5B6 /* GoalCDTVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 653615A81CF79B9F0000B5B6 /* GoalCDTVC.h */; };
+		653615AB1CF79B9F0000B5B6 /* GoalCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 653615A91CF79B9F0000B5B6 /* GoalCDTVC.m */; };
+		6537158B1CCADB7500BC27AB /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6537158A1CCADB7500BC27AB /* CoreDataTableViewController.m */; };
+		6537158E1CCADB9700BC27AB /* HabitCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6537158D1CCADB9700BC27AB /* HabitCDTVC.m */; };
+		6546D4621D1B46DE004C4EB8 /* OptionsVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 6546D4601D1B46DE004C4EB8 /* OptionsVC.h */; };
+		6546D4631D1B46DE004C4EB8 /* OptionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6546D4611D1B46DE004C4EB8 /* OptionsVC.m */; };
+		65485CCB1CF6487300680F03 /* CompletionTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 65485CC91CF6487300680F03 /* CompletionTableViewCell.h */; };
+		65485CCC1CF6487300680F03 /* CompletionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65485CCA1CF6487300680F03 /* CompletionTableViewCell.m */; };
+		65485CCF1CF65C8200680F03 /* ScheduleNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 65485CCD1CF65C8200680F03 /* ScheduleNotification.h */; };
+		65485CD01CF65C8200680F03 /* ScheduleNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 65485CCE1CF65C8200680F03 /* ScheduleNotification.m */; };
+		654BA2DC1CC9B915006D1148 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 654BA2DB1CC9B915006D1148 /* main.m */; };
+		654BB99F1D0BB27A007AB473 /* AddToDoTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 654BB99D1D0BB27A007AB473 /* AddToDoTableViewController.h */; };
+		654BB9A01D0BB27A007AB473 /* AddToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 654BB99E1D0BB27A007AB473 /* AddToDoViewController.m */; };
+		654DACB21D03841B00FCAA01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654DACB11D03841B00FCAA01 /* Main.storyboard */; };
+		6550A3331D14B8F300D5A123 /* AddHabitVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 6550A3311D14B8F300D5A123 /* AddHabitVC.h */; };
+		6550A3341D14B8F300D5A123 /* AddHabitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6550A3321D14B8F300D5A123 /* AddHabitVC.m */; };
+		65525FB51CED20D90038033B /* ToDo+CoreDataProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 65525FB11CED20D90038033B /* ToDo+CoreDataProperties.h */; };
+		65525FB61CED20D90038033B /* ToDo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 65525FB21CED20D90038033B /* ToDo+CoreDataProperties.m */; };
+		65525FB71CED20D90038033B /* ToDo.h in Headers */ = {isa = PBXBuildFile; fileRef = 65525FB31CED20D90038033B /* ToDo.h */; };
+		65525FB81CED20D90038033B /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 65525FB41CED20D90038033B /* ToDo.m */; };
+		6552FD871CC9745200A910BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552FD861CC9745200A910BC /* AppDelegate.m */; };
+		6552FD901CC9745200A910BC /* LifePlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6552FD8E1CC9745200A910BC /* LifePlanner.xcdatamodeld */; };
+		6552FD921CC9745200A910BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6552FD911CC9745200A910BC /* Assets.xcassets */; };
+		6552FD951CC9745200A910BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6552FD931CC9745200A910BC /* LaunchScreen.storyboard */; };
+		6552FDA01CC9745200A910BC /* LifePlannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552FD9F1CC9745200A910BC /* LifePlannerTests.m */; };
+		6552FDAB1CC9745200A910BC /* LifePlannerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552FDAA1CC9745200A910BC /* LifePlannerUITests.m */; };
+		6552FDD21CC97FAB00A910BC /* Goal+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552FDCB1CC97FAB00A910BC /* Goal+CoreDataProperties.m */; };
+		6552FDD31CC97FAB00A910BC /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552FDCD1CC97FAB00A910BC /* Goal.m */; };
+		6552FDD41CC97FAB00A910BC /* Habit+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552FDCF1CC97FAB00A910BC /* Habit+CoreDataProperties.m */; };
+		6552FDD51CC97FAB00A910BC /* Habit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552FDD11CC97FAB00A910BC /* Habit.m */; };
+		656700D01CD1750900676A87 /* ToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656700CF1CD1750900676A87 /* ToDoViewController.m */; };
+		656E3F071D306B1C003C9263 /* GoalCalculation.h in Headers */ = {isa = PBXBuildFile; fileRef = 656E3F051D306B1C003C9263 /* GoalCalculation.h */; };
+		656E3F081D306B1C003C9263 /* GoalCalculation.m in Sources */ = {isa = PBXBuildFile; fileRef = 656E3F061D306B1C003C9263 /* GoalCalculation.m */; };
+		656F76251D061E9700055CF6 /* SettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 656F76231D061E9700055CF6 /* SettingsViewController.h */; };
+		656F76261D061E9700055CF6 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656F76241D061E9700055CF6 /* SettingsViewController.m */; };
+		657288D51D0A2F6F00FF6EF0 /* NameFieldTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 657288D31D0A2F6F00FF6EF0 /* NameFieldTableViewCell.h */; };
+		657288D61D0A2F6F00FF6EF0 /* NameFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 657288D41D0A2F6F00FF6EF0 /* NameFieldTableViewCell.m */; };
+		65731B0A1CD4035000FA3AE2 /* ToDoTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 65731B081CD4035000FA3AE2 /* ToDoTableView.h */; };
+		65731B0B1CD4035000FA3AE2 /* ToDoTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65731B091CD4035000FA3AE2 /* ToDoTableView.m */; };
+		657A73C31D11F32300BFBED9 /* AddTVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 657A73C11D11F32300BFBED9 /* AddTVC.h */; };
+		657A73C41D11F32300BFBED9 /* AddTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 657A73C21D11F32300BFBED9 /* AddTVC.m */; };
+		657C1E831D401C8E006C9765 /* HelpViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 657C1E811D401C8E006C9765 /* HelpViewController.h */; };
+		657C1E841D401C8E006C9765 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 657C1E821D401C8E006C9765 /* HelpViewController.m */; };
+		657DF8B41D022F55002CDFE7 /* BEMAnimationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 657DF8AE1D022F55002CDFE7 /* BEMAnimationManager.h */; };
+		657DF8B51D022F55002CDFE7 /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 657DF8AF1D022F55002CDFE7 /* BEMAnimationManager.m */; };
+		657DF8B61D022F55002CDFE7 /* BEMCheckBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 657DF8B01D022F55002CDFE7 /* BEMCheckBox.h */; };
+		657DF8B71D022F55002CDFE7 /* BEMCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 657DF8B11D022F55002CDFE7 /* BEMCheckBox.m */; };
+		657DF8B81D022F55002CDFE7 /* BEMPathManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 657DF8B21D022F55002CDFE7 /* BEMPathManager.h */; };
+		657DF8B91D022F55002CDFE7 /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 657DF8B31D022F55002CDFE7 /* BEMPathManager.m */; };
+		6582E78D1D0138D4002D0E45 /* ToDoTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6582E78B1D0138D4002D0E45 /* ToDoTableViewCell.h */; };
+		6582E78E1D0138D4002D0E45 /* ToDoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6582E78C1D0138D4002D0E45 /* ToDoTableViewCell.m */; };
+		65883F291D271DB400CD0B9F /* HabitCompletionCalculation.h in Headers */ = {isa = PBXBuildFile; fileRef = 65883F271D271DB400CD0B9F /* HabitCompletionCalculation.h */; };
+		65883F2A1D271DB400CD0B9F /* HabitCompletionCalculation.m in Sources */ = {isa = PBXBuildFile; fileRef = 65883F281D271DB400CD0B9F /* HabitCompletionCalculation.m */; };
+		6588B15A1D3987510025CBFA /* DeleteCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6588B1581D3987510025CBFA /* DeleteCell.h */; };
+		6588B15B1D3987510025CBFA /* DeleteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6588B1591D3987510025CBFA /* DeleteCell.m */; };
+		658972681D25E61900ADC46C /* DateHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 658972661D25E61900ADC46C /* DateHelper.h */; };
+		658972691D25E61900ADC46C /* DateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 658972671D25E61900ADC46C /* DateHelper.m */; };
+		659CBCE21CDC095B008AFA9C /* ToDo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 659CBCE11CDC095B008AFA9C /* ToDo.rtf */; };
+		65B9FDC81D18B53400F5DF39 /* AddGoalVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B9FDC61D18B53400F5DF39 /* AddGoalVC.h */; };
+		65B9FDC91D18B53400F5DF39 /* AddGoalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B9FDC71D18B53400F5DF39 /* AddGoalVC.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6552FD9C1CC9745200A910BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6552FD771CC9745200A910BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6552FD7E1CC9745200A910BC;
+			remoteInfo = LifePlanner;
+		};
+		6552FDA71CC9745200A910BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6552FD771CC9745200A910BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6552FD7E1CC9745200A910BC;
+			remoteInfo = LifePlanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		560D53F3AC64FCD1310CEA6F /* Pods-LifePlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifePlanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LifePlanner/Pods-LifePlanner.debug.xcconfig"; sourceTree = "<group>"; };
+		650DDAC61CD2C11C005B7D67 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		651B0B591D40330800D2CA63 /* LifePlannerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LifePlannerHelper.h; sourceTree = "<group>"; };
+		651B0B5A1D40330800D2CA63 /* LifePlannerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifePlannerHelper.m; sourceTree = "<group>"; };
+		653615A81CF79B9F0000B5B6 /* GoalCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalCDTVC.h; sourceTree = "<group>"; };
+		653615A91CF79B9F0000B5B6 /* GoalCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalCDTVC.m; sourceTree = "<group>"; };
+		653715891CCADB7500BC27AB /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		6537158A1CCADB7500BC27AB /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		6537158C1CCADB9700BC27AB /* HabitCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HabitCDTVC.h; sourceTree = "<group>"; };
+		6537158D1CCADB9700BC27AB /* HabitCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HabitCDTVC.m; sourceTree = "<group>"; };
+		6546D4601D1B46DE004C4EB8 /* OptionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsVC.h; sourceTree = "<group>"; };
+		6546D4611D1B46DE004C4EB8 /* OptionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsVC.m; sourceTree = "<group>"; };
+		65485CC91CF6487300680F03 /* CompletionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletionTableViewCell.h; sourceTree = "<group>"; };
+		65485CCA1CF6487300680F03 /* CompletionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletionTableViewCell.m; sourceTree = "<group>"; };
+		65485CCD1CF65C8200680F03 /* ScheduleNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleNotification.h; sourceTree = "<group>"; };
+		65485CCE1CF65C8200680F03 /* ScheduleNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleNotification.m; sourceTree = "<group>"; };
+		654BA2DB1CC9B915006D1148 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		654BB99D1D0BB27A007AB473 /* AddToDoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddToDoTableViewController.h; sourceTree = "<group>"; };
+		654BB99E1D0BB27A007AB473 /* AddToDoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddToDoViewController.m; sourceTree = "<group>"; };
+		654DACB11D03841B00FCAA01 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		6550A3311D14B8F300D5A123 /* AddHabitVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddHabitVC.h; sourceTree = "<group>"; };
+		6550A3321D14B8F300D5A123 /* AddHabitVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddHabitVC.m; sourceTree = "<group>"; };
+		65525FB11CED20D90038033B /* ToDo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ToDo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		65525FB21CED20D90038033B /* ToDo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ToDo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		65525FB31CED20D90038033B /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDo.h; sourceTree = "<group>"; };
+		65525FB41CED20D90038033B /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDo.m; sourceTree = "<group>"; };
+		6552FD7F1CC9745200A910BC /* Life Planning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Life Planning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6552FD851CC9745200A910BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6552FD861CC9745200A910BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6552FD8F1CC9745200A910BC /* LifePlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LifePlanner.xcdatamodel; sourceTree = "<group>"; };
+		6552FD911CC9745200A910BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6552FD941CC9745200A910BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6552FD961CC9745200A910BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6552FD9B1CC9745200A910BC /* Life Planning.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Life Planning.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6552FD9F1CC9745200A910BC /* LifePlannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifePlannerTests.m; sourceTree = "<group>"; };
+		6552FDA11CC9745200A910BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6552FDA61CC9745200A910BC /* Life Planning.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Life Planning.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6552FDAA1CC9745200A910BC /* LifePlannerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifePlannerUITests.m; sourceTree = "<group>"; };
+		6552FDAC1CC9745200A910BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6552FDCA1CC97FAB00A910BC /* Goal+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Goal+CoreDataProperties.h"; sourceTree = "<group>"; };
+		6552FDCB1CC97FAB00A910BC /* Goal+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Goal+CoreDataProperties.m"; sourceTree = "<group>"; };
+		6552FDCC1CC97FAB00A910BC /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
+		6552FDCD1CC97FAB00A910BC /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
+		6552FDCE1CC97FAB00A910BC /* Habit+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Habit+CoreDataProperties.h"; sourceTree = "<group>"; };
+		6552FDCF1CC97FAB00A910BC /* Habit+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Habit+CoreDataProperties.m"; sourceTree = "<group>"; };
+		6552FDD01CC97FAB00A910BC /* Habit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Habit.h; sourceTree = "<group>"; };
+		6552FDD11CC97FAB00A910BC /* Habit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Habit.m; sourceTree = "<group>"; };
+		6552FDDB1CC9991B00A910BC /* HabitDictionaryKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HabitDictionaryKeys.h; sourceTree = "<group>"; };
+		656700CE1CD1750900676A87 /* ToDoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoViewController.h; sourceTree = "<group>"; };
+		656700CF1CD1750900676A87 /* ToDoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoViewController.m; sourceTree = "<group>"; };
+		656E3F051D306B1C003C9263 /* GoalCalculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalCalculation.h; sourceTree = "<group>"; };
+		656E3F061D306B1C003C9263 /* GoalCalculation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalCalculation.m; sourceTree = "<group>"; };
+		656F76231D061E9700055CF6 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		656F76241D061E9700055CF6 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		656F76271D06201800055CF6 /* SettingsKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsKeys.h; sourceTree = "<group>"; };
+		657288D31D0A2F6F00FF6EF0 /* NameFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameFieldTableViewCell.h; sourceTree = "<group>"; };
+		657288D41D0A2F6F00FF6EF0 /* NameFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameFieldTableViewCell.m; sourceTree = "<group>"; };
+		65731B081CD4035000FA3AE2 /* ToDoTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoTableView.h; sourceTree = "<group>"; };
+		65731B091CD4035000FA3AE2 /* ToDoTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoTableView.m; sourceTree = "<group>"; };
+		657A73C11D11F32300BFBED9 /* AddTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTVC.h; sourceTree = "<group>"; };
+		657A73C21D11F32300BFBED9 /* AddTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTVC.m; sourceTree = "<group>"; };
+		657C1E811D401C8E006C9765 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		657C1E821D401C8E006C9765 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		657DF8AE1D022F55002CDFE7 /* BEMAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMAnimationManager.h; sourceTree = "<group>"; };
+		657DF8AF1D022F55002CDFE7 /* BEMAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMAnimationManager.m; sourceTree = "<group>"; };
+		657DF8B01D022F55002CDFE7 /* BEMCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCheckBox.h; sourceTree = "<group>"; };
+		657DF8B11D022F55002CDFE7 /* BEMCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMCheckBox.m; sourceTree = "<group>"; };
+		657DF8B21D022F55002CDFE7 /* BEMPathManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMPathManager.h; sourceTree = "<group>"; };
+		657DF8B31D022F55002CDFE7 /* BEMPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMPathManager.m; sourceTree = "<group>"; };
+		6582E78B1D0138D4002D0E45 /* ToDoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoTableViewCell.h; sourceTree = "<group>"; };
+		6582E78C1D0138D4002D0E45 /* ToDoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoTableViewCell.m; sourceTree = "<group>"; };
+		65883F271D271DB400CD0B9F /* HabitCompletionCalculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HabitCompletionCalculation.h; sourceTree = "<group>"; };
+		65883F281D271DB400CD0B9F /* HabitCompletionCalculation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HabitCompletionCalculation.m; sourceTree = "<group>"; };
+		6588B1581D3987510025CBFA /* DeleteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteCell.h; sourceTree = "<group>"; };
+		6588B1591D3987510025CBFA /* DeleteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteCell.m; sourceTree = "<group>"; };
+		658972661D25E61900ADC46C /* DateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateHelper.h; sourceTree = "<group>"; };
+		658972671D25E61900ADC46C /* DateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateHelper.m; sourceTree = "<group>"; };
+		659CBCE11CDC095B008AFA9C /* ToDo.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ToDo.rtf; sourceTree = "<group>"; };
+		65B9FDC61D18B53400F5DF39 /* AddGoalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGoalVC.h; sourceTree = "<group>"; };
+		65B9FDC71D18B53400F5DF39 /* AddGoalVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGoalVC.m; sourceTree = "<group>"; };
+		9B89007614E8E7F6CC9170A6 /* libPods-LifePlanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LifePlanner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB3623D56B17DE683CF65A93 /* Pods-LifePlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifePlanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-LifePlanner/Pods-LifePlanner.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6552FD7C1CC9745200A910BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43FC55CB75C73684E8D6C1B2 /* libPods-LifePlanner.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6552FD981CC9745200A910BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6552FDA31CC9745200A910BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		653615B01CF7A3120000B5B6 /* Habit */ = {
+			isa = PBXGroup;
+			children = (
+				65883F271D271DB400CD0B9F /* HabitCompletionCalculation.h */,
+				65883F281D271DB400CD0B9F /* HabitCompletionCalculation.m */,
+				6550A3311D14B8F300D5A123 /* AddHabitVC.h */,
+				6550A3321D14B8F300D5A123 /* AddHabitVC.m */,
+				6537158C1CCADB9700BC27AB /* HabitCDTVC.h */,
+				6537158D1CCADB9700BC27AB /* HabitCDTVC.m */,
+			);
+			path = Habit;
+			sourceTree = "<group>";
+		};
+		653615B11CF7A3290000B5B6 /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				654BB99D1D0BB27A007AB473 /* AddToDoTableViewController.h */,
+				654BB99E1D0BB27A007AB473 /* AddToDoViewController.m */,
+				6582E78B1D0138D4002D0E45 /* ToDoTableViewCell.h */,
+				6582E78C1D0138D4002D0E45 /* ToDoTableViewCell.m */,
+				65731B081CD4035000FA3AE2 /* ToDoTableView.h */,
+				65731B091CD4035000FA3AE2 /* ToDoTableView.m */,
+				656700CE1CD1750900676A87 /* ToDoViewController.h */,
+				656700CF1CD1750900676A87 /* ToDoViewController.m */,
+			);
+			path = ToDo;
+			sourceTree = "<group>";
+		};
+		653615B21CF7A33E0000B5B6 /* Goal */ = {
+			isa = PBXGroup;
+			children = (
+				65B9FDC61D18B53400F5DF39 /* AddGoalVC.h */,
+				65B9FDC71D18B53400F5DF39 /* AddGoalVC.m */,
+				653615A81CF79B9F0000B5B6 /* GoalCDTVC.h */,
+				653615A91CF79B9F0000B5B6 /* GoalCDTVC.m */,
+				656E3F051D306B1C003C9263 /* GoalCalculation.h */,
+				656E3F061D306B1C003C9263 /* GoalCalculation.m */,
+			);
+			path = Goal;
+			sourceTree = "<group>";
+		};
+		6537158F1CCADBCA00BC27AB /* Core Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				65525FB11CED20D90038033B /* ToDo+CoreDataProperties.h */,
+				65525FB21CED20D90038033B /* ToDo+CoreDataProperties.m */,
+				65525FB31CED20D90038033B /* ToDo.h */,
+				65525FB41CED20D90038033B /* ToDo.m */,
+				6552FDCA1CC97FAB00A910BC /* Goal+CoreDataProperties.h */,
+				6552FDCB1CC97FAB00A910BC /* Goal+CoreDataProperties.m */,
+				6552FDCC1CC97FAB00A910BC /* Goal.h */,
+				6552FDCD1CC97FAB00A910BC /* Goal.m */,
+				6552FDCE1CC97FAB00A910BC /* Habit+CoreDataProperties.h */,
+				6552FDCF1CC97FAB00A910BC /* Habit+CoreDataProperties.m */,
+				6552FDD01CC97FAB00A910BC /* Habit.h */,
+				6552FDD11CC97FAB00A910BC /* Habit.m */,
+			);
+			path = "Core Data Model";
+			sourceTree = "<group>";
+		};
+		654BA2DD1CC9B91F006D1148 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6552FD961CC9745200A910BC /* Info.plist */,
+				6552FD931CC9745200A910BC /* LaunchScreen.storyboard */,
+				654BA2DB1CC9B915006D1148 /* main.m */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		6552FD761CC9745200A910BC = {
+			isa = PBXGroup;
+			children = (
+				659CBCE11CDC095B008AFA9C /* ToDo.rtf */,
+				650DDAC61CD2C11C005B7D67 /* Podfile */,
+				6552FD811CC9745200A910BC /* LifePlanning */,
+				6552FD9E1CC9745200A910BC /* LifePlannerTests */,
+				6552FDA91CC9745200A910BC /* LifePlannerUITests */,
+				6552FD801CC9745200A910BC /* Products */,
+				DC7977D6B94D3A0C0FF0E363 /* Pods */,
+				EED107169861CC65BBE34D6C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6552FD801CC9745200A910BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6552FD7F1CC9745200A910BC /* Life Planning.app */,
+				6552FD9B1CC9745200A910BC /* Life Planning.xctest */,
+				6552FDA61CC9745200A910BC /* Life Planning.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6552FD811CC9745200A910BC /* LifePlanning */ = {
+			isa = PBXGroup;
+			children = (
+				6552FD8E1CC9745200A910BC /* LifePlanner.xcdatamodeld */,
+				6552FD911CC9745200A910BC /* Assets.xcassets */,
+				654DACB11D03841B00FCAA01 /* Main.storyboard */,
+				656F76271D06201800055CF6 /* SettingsKeys.h */,
+				6552FDDB1CC9991B00A910BC /* HabitDictionaryKeys.h */,
+				653715891CCADB7500BC27AB /* CoreDataTableViewController.h */,
+				6537158A1CCADB7500BC27AB /* CoreDataTableViewController.m */,
+				655F75151D41778400120436 /* Controllers */,
+				655F75161D4177A600120436 /* TableViewCells */,
+				655F75171D4177D700120436 /* Helpers */,
+				6537158F1CCADBCA00BC27AB /* Core Data Model */,
+				653615B11CF7A3290000B5B6 /* ToDo */,
+				653615B01CF7A3120000B5B6 /* Habit */,
+				653615B21CF7A33E0000B5B6 /* Goal */,
+				6552FD851CC9745200A910BC /* AppDelegate.h */,
+				6552FD861CC9745200A910BC /* AppDelegate.m */,
+				657DF89F1D022EFC002CDFE7 /* BEMCheckbox */,
+				654BA2DD1CC9B91F006D1148 /* SupportingFiles */,
+			);
+			name = LifePlanning;
+			path = LifePlanner;
+			sourceTree = "<group>";
+		};
+		6552FD9E1CC9745200A910BC /* LifePlannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				6552FD9F1CC9745200A910BC /* LifePlannerTests.m */,
+				6552FDA11CC9745200A910BC /* Info.plist */,
+			);
+			path = LifePlannerTests;
+			sourceTree = "<group>";
+		};
+		6552FDA91CC9745200A910BC /* LifePlannerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6552FDAA1CC9745200A910BC /* LifePlannerUITests.m */,
+				6552FDAC1CC9745200A910BC /* Info.plist */,
+			);
+			path = LifePlannerUITests;
+			sourceTree = "<group>";
+		};
+		655F75151D41778400120436 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				657C1E811D401C8E006C9765 /* HelpViewController.h */,
+				657C1E821D401C8E006C9765 /* HelpViewController.m */,
+				6546D4601D1B46DE004C4EB8 /* OptionsVC.h */,
+				6546D4611D1B46DE004C4EB8 /* OptionsVC.m */,
+				657A73C11D11F32300BFBED9 /* AddTVC.h */,
+				657A73C21D11F32300BFBED9 /* AddTVC.m */,
+				656F76231D061E9700055CF6 /* SettingsViewController.h */,
+				656F76241D061E9700055CF6 /* SettingsViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		655F75161D4177A600120436 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				6588B1581D3987510025CBFA /* DeleteCell.h */,
+				6588B1591D3987510025CBFA /* DeleteCell.m */,
+				657288D31D0A2F6F00FF6EF0 /* NameFieldTableViewCell.h */,
+				657288D41D0A2F6F00FF6EF0 /* NameFieldTableViewCell.m */,
+				65485CC91CF6487300680F03 /* CompletionTableViewCell.h */,
+				65485CCA1CF6487300680F03 /* CompletionTableViewCell.m */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		655F75171D4177D700120436 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				65485CCD1CF65C8200680F03 /* ScheduleNotification.h */,
+				65485CCE1CF65C8200680F03 /* ScheduleNotification.m */,
+				651B0B591D40330800D2CA63 /* LifePlannerHelper.h */,
+				651B0B5A1D40330800D2CA63 /* LifePlannerHelper.m */,
+				658972661D25E61900ADC46C /* DateHelper.h */,
+				658972671D25E61900ADC46C /* DateHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		657DF89F1D022EFC002CDFE7 /* BEMCheckbox */ = {
+			isa = PBXGroup;
+			children = (
+				657DF8AE1D022F55002CDFE7 /* BEMAnimationManager.h */,
+				657DF8AF1D022F55002CDFE7 /* BEMAnimationManager.m */,
+				657DF8B01D022F55002CDFE7 /* BEMCheckBox.h */,
+				657DF8B11D022F55002CDFE7 /* BEMCheckBox.m */,
+				657DF8B21D022F55002CDFE7 /* BEMPathManager.h */,
+				657DF8B31D022F55002CDFE7 /* BEMPathManager.m */,
+			);
+			path = BEMCheckbox;
+			sourceTree = "<group>";
+		};
+		DC7977D6B94D3A0C0FF0E363 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				560D53F3AC64FCD1310CEA6F /* Pods-LifePlanner.debug.xcconfig */,
+				FB3623D56B17DE683CF65A93 /* Pods-LifePlanner.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EED107169861CC65BBE34D6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B89007614E8E7F6CC9170A6 /* libPods-LifePlanner.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		656700D11CD1821000676A87 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				657C1E831D401C8E006C9765 /* HelpViewController.h in Headers */,
+				65485CCF1CF65C8200680F03 /* ScheduleNotification.h in Headers */,
+				657A73C31D11F32300BFBED9 /* AddTVC.h in Headers */,
+				6588B15A1D3987510025CBFA /* DeleteCell.h in Headers */,
+				651B0B5B1D40330800D2CA63 /* LifePlannerHelper.h in Headers */,
+				65883F291D271DB400CD0B9F /* HabitCompletionCalculation.h in Headers */,
+				656F76251D061E9700055CF6 /* SettingsViewController.h in Headers */,
+				657DF8B41D022F55002CDFE7 /* BEMAnimationManager.h in Headers */,
+				657288D51D0A2F6F00FF6EF0 /* NameFieldTableViewCell.h in Headers */,
+				65731B0A1CD4035000FA3AE2 /* ToDoTableView.h in Headers */,
+				657DF8B81D022F55002CDFE7 /* BEMPathManager.h in Headers */,
+				657DF8B61D022F55002CDFE7 /* BEMCheckBox.h in Headers */,
+				65525FB71CED20D90038033B /* ToDo.h in Headers */,
+				658972681D25E61900ADC46C /* DateHelper.h in Headers */,
+				6546D4621D1B46DE004C4EB8 /* OptionsVC.h in Headers */,
+				654BB99F1D0BB27A007AB473 /* AddToDoTableViewController.h in Headers */,
+				653615AA1CF79B9F0000B5B6 /* GoalCDTVC.h in Headers */,
+				6550A3331D14B8F300D5A123 /* AddHabitVC.h in Headers */,
+				65B9FDC81D18B53400F5DF39 /* AddGoalVC.h in Headers */,
+				6582E78D1D0138D4002D0E45 /* ToDoTableViewCell.h in Headers */,
+				656E3F071D306B1C003C9263 /* GoalCalculation.h in Headers */,
+				65525FB51CED20D90038033B /* ToDo+CoreDataProperties.h in Headers */,
+				65485CCB1CF6487300680F03 /* CompletionTableViewCell.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6552FD7E1CC9745200A910BC /* Life Planning */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6552FDAF1CC9745200A910BC /* Build configuration list for PBXNativeTarget "Life Planning" */;
+			buildPhases = (
+				3B7F56E4AE99CC3B34E1BEC5 /* [CP] Check Pods Manifest.lock */,
+				6552FD7B1CC9745200A910BC /* Sources */,
+				6552FD7C1CC9745200A910BC /* Frameworks */,
+				6552FD7D1CC9745200A910BC /* Resources */,
+				656700D11CD1821000676A87 /* Headers */,
+				289D9AD1F60E2242567656E0 /* [CP] Embed Pods Frameworks */,
+				0FF578805B21D27D7555F709 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Life Planning";
+			productName = LifePlanner;
+			productReference = 6552FD7F1CC9745200A910BC /* Life Planning.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6552FD9A1CC9745200A910BC /* Life PlanningTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6552FDB21CC9745200A910BC /* Build configuration list for PBXNativeTarget "Life PlanningTests" */;
+			buildPhases = (
+				6552FD971CC9745200A910BC /* Sources */,
+				6552FD981CC9745200A910BC /* Frameworks */,
+				6552FD991CC9745200A910BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6552FD9D1CC9745200A910BC /* PBXTargetDependency */,
+			);
+			name = "Life PlanningTests";
+			productName = LifePlannerTests;
+			productReference = 6552FD9B1CC9745200A910BC /* Life Planning.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6552FDA51CC9745200A910BC /* Life PlanningUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6552FDB51CC9745200A910BC /* Build configuration list for PBXNativeTarget "Life PlanningUITests" */;
+			buildPhases = (
+				6552FDA21CC9745200A910BC /* Sources */,
+				6552FDA31CC9745200A910BC /* Frameworks */,
+				6552FDA41CC9745200A910BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6552FDA81CC9745200A910BC /* PBXTargetDependency */,
+			);
+			name = "Life PlanningUITests";
+			productName = LifePlannerUITests;
+			productReference = 6552FDA61CC9745200A910BC /* Life Planning.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6552FD771CC9745200A910BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Daniel;
+				TargetAttributes = {
+					6552FD7E1CC9745200A910BC = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 3K4ALTN6AF;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					6552FD9A1CC9745200A910BC = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 6552FD7E1CC9745200A910BC;
+					};
+					6552FDA51CC9745200A910BC = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 6552FD7E1CC9745200A910BC;
+					};
+				};
+			};
+			buildConfigurationList = 6552FD7A1CC9745200A910BC /* Build configuration list for PBXProject "Life Planning" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6552FD761CC9745200A910BC;
+			productRefGroup = 6552FD801CC9745200A910BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6552FD7E1CC9745200A910BC /* Life Planning */,
+				6552FD9A1CC9745200A910BC /* Life PlanningTests */,
+				6552FDA51CC9745200A910BC /* Life PlanningUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6552FD7D1CC9745200A910BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				659CBCE21CDC095B008AFA9C /* ToDo.rtf in Resources */,
+				654DACB21D03841B00FCAA01 /* Main.storyboard in Resources */,
+				6552FD951CC9745200A910BC /* LaunchScreen.storyboard in Resources */,
+				6552FD921CC9745200A910BC /* Assets.xcassets in Resources */,
+				650DDAC71CD2C11C005B7D67 /* Podfile in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6552FD991CC9745200A910BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6552FDA41CC9745200A910BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FF578805B21D27D7555F709 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LifePlanner/Pods-LifePlanner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		289D9AD1F60E2242567656E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LifePlanner/Pods-LifePlanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B7F56E4AE99CC3B34E1BEC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6552FD7B1CC9745200A910BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				654BA2DC1CC9B915006D1148 /* main.m in Sources */,
+				65485CD01CF65C8200680F03 /* ScheduleNotification.m in Sources */,
+				656F76261D061E9700055CF6 /* SettingsViewController.m in Sources */,
+				6537158B1CCADB7500BC27AB /* CoreDataTableViewController.m in Sources */,
+				657DF8B71D022F55002CDFE7 /* BEMCheckBox.m in Sources */,
+				6582E78E1D0138D4002D0E45 /* ToDoTableViewCell.m in Sources */,
+				6537158E1CCADB9700BC27AB /* HabitCDTVC.m in Sources */,
+				65883F2A1D271DB400CD0B9F /* HabitCompletionCalculation.m in Sources */,
+				6550A3341D14B8F300D5A123 /* AddHabitVC.m in Sources */,
+				651B0B5C1D40330800D2CA63 /* LifePlannerHelper.m in Sources */,
+				6546D4631D1B46DE004C4EB8 /* OptionsVC.m in Sources */,
+				6552FDD31CC97FAB00A910BC /* Goal.m in Sources */,
+				6552FDD41CC97FAB00A910BC /* Habit+CoreDataProperties.m in Sources */,
+				657288D61D0A2F6F00FF6EF0 /* NameFieldTableViewCell.m in Sources */,
+				6552FDD51CC97FAB00A910BC /* Habit.m in Sources */,
+				6552FD901CC9745200A910BC /* LifePlanner.xcdatamodeld in Sources */,
+				656700D01CD1750900676A87 /* ToDoViewController.m in Sources */,
+				65525FB61CED20D90038033B /* ToDo+CoreDataProperties.m in Sources */,
+				657DF8B91D022F55002CDFE7 /* BEMPathManager.m in Sources */,
+				653615AB1CF79B9F0000B5B6 /* GoalCDTVC.m in Sources */,
+				65731B0B1CD4035000FA3AE2 /* ToDoTableView.m in Sources */,
+				656E3F081D306B1C003C9263 /* GoalCalculation.m in Sources */,
+				6552FD871CC9745200A910BC /* AppDelegate.m in Sources */,
+				6588B15B1D3987510025CBFA /* DeleteCell.m in Sources */,
+				654BB9A01D0BB27A007AB473 /* AddToDoViewController.m in Sources */,
+				65B9FDC91D18B53400F5DF39 /* AddGoalVC.m in Sources */,
+				65485CCC1CF6487300680F03 /* CompletionTableViewCell.m in Sources */,
+				6552FDD21CC97FAB00A910BC /* Goal+CoreDataProperties.m in Sources */,
+				657C1E841D401C8E006C9765 /* HelpViewController.m in Sources */,
+				657A73C41D11F32300BFBED9 /* AddTVC.m in Sources */,
+				65525FB81CED20D90038033B /* ToDo.m in Sources */,
+				657DF8B51D022F55002CDFE7 /* BEMAnimationManager.m in Sources */,
+				658972691D25E61900ADC46C /* DateHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6552FD971CC9745200A910BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6552FDA01CC9745200A910BC /* LifePlannerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6552FDA21CC9745200A910BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6552FDAB1CC9745200A910BC /* LifePlannerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6552FD9D1CC9745200A910BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6552FD7E1CC9745200A910BC /* Life Planning */;
+			targetProxy = 6552FD9C1CC9745200A910BC /* PBXContainerItemProxy */;
+		};
+		6552FDA81CC9745200A910BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6552FD7E1CC9745200A910BC /* Life Planning */;
+			targetProxy = 6552FDA71CC9745200A910BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6552FD931CC9745200A910BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6552FD941CC9745200A910BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6552FDAD1CC9745200A910BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6552FDAE1CC9745200A910BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6552FDB01CC9745200A910BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 560D53F3AC64FCD1310CEA6F /* Pods-LifePlanner.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = LifePlanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcs.LifePlan;
+				PRODUCT_NAME = "Life Planning";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		6552FDB11CC9745200A910BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB3623D56B17DE683CF65A93 /* Pods-LifePlanner.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = LifePlanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcs.LifePlan;
+				PRODUCT_NAME = "Life Planning";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		6552FDB31CC9745200A910BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LifePlannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dcs.LifePlannerTests;
+				PRODUCT_NAME = "Life Planning";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Life Planning.app/Life Planning";
+			};
+			name = Debug;
+		};
+		6552FDB41CC9745200A910BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LifePlannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dcs.LifePlannerTests;
+				PRODUCT_NAME = "Life Planning";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Life Planning.app/Life Planning";
+			};
+			name = Release;
+		};
+		6552FDB61CC9745200A910BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LifePlannerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dcs.LifePlannerUITests;
+				PRODUCT_NAME = "Life Planning";
+				TEST_TARGET_NAME = LifePlanner;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		6552FDB71CC9745200A910BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LifePlannerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dcs.LifePlannerUITests;
+				PRODUCT_NAME = "Life Planning";
+				TEST_TARGET_NAME = LifePlanner;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6552FD7A1CC9745200A910BC /* Build configuration list for PBXProject "Life Planning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6552FDAD1CC9745200A910BC /* Debug */,
+				6552FDAE1CC9745200A910BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6552FDAF1CC9745200A910BC /* Build configuration list for PBXNativeTarget "Life Planning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6552FDB01CC9745200A910BC /* Debug */,
+				6552FDB11CC9745200A910BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6552FDB21CC9745200A910BC /* Build configuration list for PBXNativeTarget "Life PlanningTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6552FDB31CC9745200A910BC /* Debug */,
+				6552FDB41CC9745200A910BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6552FDB51CC9745200A910BC /* Build configuration list for PBXNativeTarget "Life PlanningUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6552FDB61CC9745200A910BC /* Debug */,
+				6552FDB71CC9745200A910BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6552FD8E1CC9745200A910BC /* LifePlanner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6552FD8F1CC9745200A910BC /* LifePlanner.xcdatamodel */,
+			);
+			currentVersion = 6552FD8F1CC9745200A910BC /* LifePlanner.xcdatamodel */;
+			path = LifePlanner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6552FD771CC9745200A910BC /* Project object */;
+}

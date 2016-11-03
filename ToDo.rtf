@@ -31,6 +31,17 @@ I need to change this.\cf3 \
 \
 How to do inheritence on storyboards.  How do I make an abstract storyboard\
 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 KEY:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf2 Green = Completed\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 -Black = not implemented\
+\cf4 -Red = hard to implement\cf3 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf3 \
 \pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
 \cf0 Now:\
 \cf2 - Icons\
@@ -39,20 +50,28 @@ How to do inheritence on storyboards.  How do I make an abstract storyboard\
 -How habits complete daily\
 -Habit penalty\
 -dealloc notifications\
-\cf0 -red to red/yellow change and vice versa\
--resign delegates(includes datasources)\
+-red to red/yellow change and vice versa\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 -resign delegates(includes datasources)\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
 \cf2 -on alert show correct screen\
 -change note text to show black not grey color\
-\cf0 -Setting default habit alerts(from red or yellow) does not delete alerts if manual is selected\
--Text color of goal when changing color because of weekly habit progress\
--save context on tableview?\
+-Setting default habit alerts(from red or yellow) does not delete alerts if manual is selected\
+\cf0 -Text color of goal when changing color because of weekly habit progress\
+\cf2 -save context on tableview?\
 -look at habit penalty.  I should take away any penalty if they put they have done a habit on days where i thought they skipped\
--adjust text size for help\
-If Time:\
--make text bigger through apple accessibility settings.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 -habit penalty off by one day if I add new days when I have a penalty  I think the j variable is messed up\cf2 \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
+\cf2 -adjust text size for help\
+\cf0 If Time:\
+-make text bigger through apple accessibility settings. Although doesn't seem feasible on iphone 4s with text size\
 \cf2 -Make sure tableviewCells are the correct size in all tableviews\
 -Check off for goals\
 -Show completed goals option\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf4 -Take out testing things in habit\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
 \cf0 \
 \
 \cf2 Test: \
@@ -238,7 +257,7 @@ Habit guide:\
 \ls12\ilvl0\cf0 {\listtext	\'95	}ToDo\
 \pard\tx560\tx1120\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 \cf0 \
-Optionals:\
+Additional features to add at a later date:\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 \cf0 	\'95	To have repeating in todo just setup a new attribute string.  The string is the repeat interval as defined in NSCalendar(like 
 \f1 \cf5 \expnd0\expndtw0\kerning0
@@ -247,11 +266,15 @@ NSWeekOfMonthCalendarUnit)\cf0 \kerning1\expnd0\expndtw0 \
 \ls13\ilvl0
 \f0 \cf0 {\listtext	\'95	}Complete all habits button\
 {\listtext	\'95	}have an importance for each habit so it can be weighted when I calculate goal progression\
+{\listtext	\'95	}If I select a future or previous date then go back to today when I add a todo it shows 12am instead of the current time.\
+{\listtext	\'95	}Facebook integration for social aspect to habit completion\
 \pard\tx560\tx1120\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 \cf0 \
 Learned:\
 \pard\tx220\tx720\tx1120\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
 \ls14\ilvl0\cf0 {\listtext	\'95	}If I want to create programmatic constraints then I must put in four:  width, height, x, y\
+{\listtext	\'95	}NSFetchedResultsController should not be deleted because I can just change the NSFetchRequest property(by accessing is parts(context, predicate etc)) then call perform fetch.nextres\
+{\listtext	\'95	}NSFetchedResultsController Delegate does not get updated if data doesn't change.  If I just do a new fetch then it will not call the delegate methods.  Data in the database must change.\
 {\listtext	\'95	}If something needs to be reusable for prototype and static cells I should implement all programmatically or use a XIB.\
 {\listtext	\'95	}Protocol is a bunch of defined methods that a class can implement\
 {\listtext	\'95	}Delegate is a pointer to a function and they are usually put in these protocols\
@@ -266,5 +289,4 @@ Learned:\
 {\listtext	\uc0\u8259 	}\
 \pard\tx560\tx1120\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 \cf0 \
-\
 }

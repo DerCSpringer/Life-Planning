@@ -20,6 +20,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notification" optional="YES" attributeType="Binary" valueTransformerName="UILocalNotification" syncable="YES"/>
         <attribute name="penality" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="timesToComplete" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
         <relationship name="goalForHabit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Goal" inverseName="habitsForGoal" inverseEntity="Goal" syncable="YES"/>
         <relationship name="toDosForHabit" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ToDo" inverseName="habitForToDo" inverseEntity="ToDo" syncable="YES"/>
@@ -37,7 +38,7 @@
     </entity>
     <elements>
         <element name="Goal" positionX="214" positionY="-297" width="128" height="148"/>
-        <element name="Habit" positionX="43" positionY="-315" width="128" height="238"/>
+        <element name="Habit" positionX="43" positionY="-315" width="128" height="255"/>
         <element name="ToDo" positionX="378" positionY="-315" width="126" height="178"/>
     </elements>
 </model>

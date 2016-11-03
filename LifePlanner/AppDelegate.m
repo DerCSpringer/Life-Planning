@@ -12,14 +12,12 @@
 #import "HabitCompletionCalculation.h"
 #import "SettingsKeys.h"
 #import "LifePlannerHelper.h"
-#import <objc/runtime.h>
 #import "HabitCDTVC.h"
 #import "ToDoViewController.h"
 
 @interface AppDelegate ()
 
-
-
+@property (nonatomic, weak) UIWindow *alertWindow;
 
 @end
 
@@ -28,8 +26,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-    // Override point for customization after application launch.
     
     UIUserNotificationType types = UIUserNotificationTypeBadge |
     UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
@@ -39,15 +35,26 @@
     
     [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    //Set up options on first install
+    if (![defaults boolForKey:@"Install"]) {
+        [defaults setBool:YES forKey:@"Install"];
+        [defaults setBool:YES forKey:HABIT_ALERTS];
+        [defaults setInteger:2 forKey:HABIT_COMPLETION_TYPE];
+        [defaults setBool:YES forKey:HABIT_PENALITY];
+        [defaults setBool:NO forKey:TODOS_SHOW_COMPLETED];
+        [defaults setBool:NO forKey:GOALS_SHOW_COMPLETED];
+        
+    }
+    
     //update all habit.dates if auto is selected
     NSArray *habits = [self fetchHabits];
     [LifePlannerHelper updateHabitsWithCompletionDates:habits];
-#warning if someone updates manual this doesn't work so great because what if they update that they didn't skip any days?
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([defaults boolForKey:HABIT_PENALITY]) {
         [LifePlannerHelper updateHabitsWithPenalty:habits];
     }
-    [self displayViewControllerForNotification:[launchOptions valueForKey:UIApplicationLaunchOptionsLocalNotificationKey] application:application];
+    [self displayViewControllerForNotification:[launchOptions valueForKey:UIApplicationLaunchOptionsLocalNotificationKey]];
     return YES;
 }
 
@@ -61,6 +68,7 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"DidScrollOnce"];
     [self saveContext];
 }
 
@@ -69,18 +77,62 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    
+
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
-#warning update habit alerts here too(turn off or on).  I need to do this if I've updated the number of times I've completed a habit
+    
+    //Update habit alarms if you've updated the habits with new dates.
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:NO forKey:@"DidScrollOnce"];
+    if (self.managedObjectContext && [defaults boolForKey:HABIT_ALERTS] && [@[[NSNumber numberWithInt:0],[NSNumber numberWithInt:1]] containsObject:[defaults valueForKey:HABIT_COMPLETION_TYPE]]) {
+        NSArray *habits = [self fetchHabits];
+        // HABIT_COMPLETION_TYPE is red or red/yellow
+        
+        [ScheduleNotification updateHabitAlarms:habits];
+    }
+    
     [self saveContext];
 }
 
--(void)displayViewControllerForNotification:(UILocalNotification *)notification application:(UIApplication *)application
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(nonnull UILocalNotification *)notification
 {
+    //If we're the active app then display noteification
+    if ([application applicationState] == UIApplicationStateActive) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:notification.alertTitle message:notification.alertBody preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {
+                                                                  [self displayViewControllerForNotification:notification];
+                                                              }];
+        UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {
+                                                                  [alert dismissViewControllerAnimated:YES completion:nil];
+                                                              }];
+        [alert addAction:defaultAction];
+        [alert addAction:cancelAction];
+        UIWindow *alertWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        alertWindow.rootViewController = [[UIViewController alloc] init];
+        alertWindow.windowLevel = UIWindowLevelAlert + 1;
+        [alertWindow makeKeyAndVisible];
+        [alertWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+        return;
+    }
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *habits = [self fetchHabits];
+    [LifePlannerHelper updateHabitsWithCompletionDates:habits];
+    if ([defaults boolForKey:HABIT_PENALITY]) {
+        [LifePlannerHelper updateHabitsWithPenalty:habits];
+    }
+    [self displayViewControllerForNotification:notification];
+}
+
+-(void)displayViewControllerForNotification:(UILocalNotification *)notification
+{
+    //If notification then display the correct viewController for the passed in alert
     if (notification == nil) {
         return;
     }
@@ -93,6 +145,16 @@
     else if ([[notification.userInfo valueForKey:@"Object"] isEqualToString:@"ToDo"]) {
         if ([self.window.rootViewController isKindOfClass:[UITabBarController class]]) {
             UITabBarController *tab = (UITabBarController *)self.window.rootViewController;
+            if ([tab.viewControllers[0] isKindOfClass:[UINavigationController class]])
+            {
+                UINavigationController *uinvc = (UINavigationController *)tab.viewControllers[0];
+                if([uinvc.viewControllers[0] isKindOfClass:[ToDoViewController class]])
+                {
+                    ToDoViewController *todovc = (ToDoViewController *)uinvc.viewControllers[0];
+                    todovc.dateSelected = [NSDate date];
+
+                }
+            }
             tab.selectedIndex = 0;
         }
         
@@ -122,7 +184,7 @@
     //Updates habits with completed times if auto options is selected for habit
     [LifePlannerHelper updateHabitsWithCompletionDates:habits];
     //If I have habit alerts allowed and I've selected alert on red or yellow then do this
-    if (self.managedObjectContext && [[defaults valueForKey:HABIT_ALERTS] boolValue] && [@[[NSNumber numberWithInt:0],[NSNumber numberWithInt:1]] containsObject:[defaults valueForKey:HABIT_COMPLETION_TYPE]]) {// HABIT_COMPLETION_TYPE is 0 or 1
+    if (self.managedObjectContext && [defaults boolForKey:HABIT_ALERTS] && [@[[NSNumber numberWithInt:0],[NSNumber numberWithInt:1]] containsObject:[defaults valueForKey:HABIT_COMPLETION_TYPE]]) {// HABIT_COMPLETION_TYPE is 0 or 1
         
         [ScheduleNotification updateHabitAlarms:habits];
         completionHandler(UIBackgroundFetchResultNewData);
@@ -176,7 +238,7 @@
         // Replace this with code to handle the error appropriately.
         // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+        //abort();
     }
     
     return _persistentStoreCoordinator;
@@ -207,8 +269,6 @@
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
             // Replace this implementation with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
         }
     }
 }
