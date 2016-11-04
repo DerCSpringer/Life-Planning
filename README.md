@@ -1,8 +1,3 @@
-p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 18.0px 'Lucida Grande'; -webkit-text-stroke: #898989}
-p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 14.0px 'Lucida Grande'; -webkit-text-stroke: #898989; min-height: 17.0px}
-p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 14.0px 'Lucida Grande'; -webkit-text-stroke: #898989}
-span.s1 {font-kerning: none}
-
 **LIFE PLANNING**
 
 **In the Apple App Store**
